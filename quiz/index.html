@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Test App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Quizter</h1>
+
+  <!-- Menu screen -->
+  <div id="menu-screen">
+    <h2>Choose Topic</h2>
+    <select id="topicSelect" onchange="changeTopic(this)"></select>
+    <button id="editTopicBtn" onclick="editTopic()" style="display:none;">✏️ Edit</button>
+    <button id="deleteTopicBtn" onclick="deleteTopic()" style="display:none;">🗑 Delete</button>
+    <br><br>
+    <button onclick="createNewTopic()">+ Create New Topic</button>
+
+    <h2>Choose Option</h2>
+    <button onclick="startQuiz('term-to-def')">Terms → Definitions</button>
+    <button onclick="startQuiz('def-to-term')">Definitions → Terms</button>
+  </div>
+
+  <!-- Quiz screen -->
+  <div id="quiz-screen" style="display:none;">
+    <div id="quiz-container"></div>
+    <br><br>
+    <button onclick="backToMenu()">⬅ Back to Menu</button>
+  </div>
+
+  <!-- Editor screen -->
+  <div id="editor-screen" style="display:none;">
+    <h2>Add New Term & Definition</h2>
+    <input id="termInput" placeholder="Enter Term">
+    <br><br>
+    <input id="defInput" placeholder="Enter Definition">
+    <br><br>
+    <button onclick="saveMaterial()">💾 Save</button>
+    <button onclick="backToMenu()">⬅ Back to Menu</button>
+    <br><br>
+    <button style="background: red; color: white;" onclick="deleteAll()">🗑 Delete All</button>
+
+    <h3>Current Material</h3>
+    <ul id="materialList"></ul>
+  </div>
+
+  <!-- New Topic Modal -->
+  <div id="newTopicModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+    background:#d7d1b6; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:999;">
+    <h3>Create New Topic</h3>
+    <input type="text" id="newTopicInput" placeholder="Enter topic name" style="padding:8px; width:80%; font-size:16px;">
+    <br><br>
+    <button onclick="confirmNewTopic()">✅ Save</button>
+    <button onclick="closeNewTopicModal()">❌ Cancel</button>
+  </div>
+
+  <!-- Toast message -->
+  <div id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
