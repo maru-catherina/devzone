@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevZone Studio QA</title>
+  <link rel="stylesheet" href="styleqa.css">
+</head>
+<body>
+
+  <!-- Main Navigation -->
+  <header>
+    <div class="header_page">
+      <img class = "icon" src="images/logo_withbgonly.png"/>
+     <h5>DEVZONE STUDIO</h5>
+    
+    </div><nav class="menu">
+      
+    <div class="menu-toggle" id="titleofmenu">
+           <img class='menuicon' src="images/menu_24dp_293245_FILL0_wght400_GRAD0_opsz24.png"/>
+        </div>
+    
+      <ul class="menu-list">
+        <li><a href="https://github.com/maru-catherina/devzone">Back to Devzone Studio Website</a></li>
+        <li ><a href="https://github.com/maru-catherina/devzone/qa" class="activ">QA</a></li>
+      </ul> 
+    </nav>
+     </header>
+  
+  <section id="qa" >
+        <h1>My QA Portfolio - How I tested DEVZONE Studio website</h2>
+        <p>A trensparent look into my QA procecc: manual  tests, bugs triaged and fixed.</p>
+   
+
+  <div id="manual" class="part">
+    <h2>Manual Test Cases</h2>
+    <p>Coverage for core flows</p>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Test</th>
+          <th>Expected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>TC-01</td><td>Header loads and displays logo and name of company</td><td>DevZone Studio logo and name visible in 1s</td></tr>
+        <tr><td>TC-02</td><td>Navigation links route correctly</td><td>User redirected to correct section without error</td></tr>
+        <tr><td>TC-03</td><td>Action button routes to contact form</td><td>After pushing the button user redirected to contact form</td></tr>
+        <tr><td>TC-04</td><td>Portfolio images zoom on hover</td><td>Images scale up by ~20% with smooth transition</td></tr>
+        <tr><td>TC-05</td><td>Watch Preview button opens video modal</td><td>Video player appears, video autoplays, background overlay is displayed</td></tr>
+        <tr><td>TC-06</td><td>Hide video button closes video modal</td><td>Video modal disappears, video stops playing, user returns to portfolio section</td></tr>
+        <tr><td>TC-07</td><td>Contact form - Name field validation - minimum length</td><td>Error message appears if less than 1 characters: "Please fill the field"</td></tr>
+        <tr><td>TC-08</td><td>Contact form - Phone field format validation</td><td>Invalid format shows error</td></tr>
+        <tr><td>TC-09</td><td>Contact form - Email field format validation</td><td>Invalid email shows error: "Please enter a valid email address (e.g. name@domain.com)". Form is not submitted</td></tr>
+        <tr><td>TC-10</td><td>Preferred contact method toggle switches correctly</td><td>Selected toggle becomes active, other options become inactive. Selection is saved</td></tr>
+        <tr><td>TC-11</td><td>Contact form successful submission</td><td>After valid data and clicking Send, success message is shown: "Message sent successfully!" Form fields are cleared</td></tr>
+        <tr><td>TC-12</td><td>Mobile menu opens on hamburger click(375px)</td><td>Menu slide open, nav links visible </td></tr>
+        <tr><td>TC-13</td><td>Mobile menu closes on hamburger click again</td><td>Menu slide closed, nav links hided </td></tr>
+        <tr><td>TC-14</td><td>Mobile menu closes on outside click</td><td>Menu slide closed, when clicking outside navnav links visible </td></tr>
+     </tbody>
+    </table>
+     <p>More detailed test cases on <a href="https://github.com/maru-catherina/QA_Portfolio/tree/main/devzone-landing" class="orange">GitHUb</a></p>
+ 
+  </div>
+ 
+  <div id="bug-report" class="part">
+    <h2>Bug Reports</h2>
+    <p>Found during manual testing</p>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Bug</th><th>Severity</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>BUG-01</td><td>Mobile menu doesn't close after click outside</td><td><span class="sev high">High</span></td></tr>
+        <tr><td>BUG-02</td><td>Name field validation accept 1 charapter</td><td><span class="sev medium">Medium</span></td></tr>
+      </tbody>
+    </table>
+     <p>More detailed Bug Reports on <a href="https://github.com/maru-catherina/QA_Portfolio/tree/main/devzone-landing" class="orange">GitHUb</a></p>
+  </div>
+
+     </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 DevZone Studio. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
